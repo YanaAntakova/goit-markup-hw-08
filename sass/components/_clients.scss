@@ -1,0 +1,30 @@
+.clients {
+background-color: #FFFFFF;
+}
+.clients__list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.clients__icon {
+    fill: currentColor;
+}
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid currentColor;
+    border-radius: 4px;
+    color: #AFB1B8;
+    transition: color var(--animation);
+
+    &:hover,
+    &:focus {
+        color: var(--accent-cl);
+}
+}
+
+
+
