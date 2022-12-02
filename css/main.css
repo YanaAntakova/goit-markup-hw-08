@@ -4,6 +4,23 @@
   --main-txt-cl: #212121;
 }
 
+.clients, .team, .works, .features, .hero {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .clients, .team, .works, .features, .hero {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients, .team, .works, .features, .hero {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 body {
   font-family: "Roboto", "Times New Roman", "Verdana", "Tahoma", sans-serif;
   background-color: #FFFFFF;
@@ -25,9 +42,6 @@ html {
 .works__list,
 .team__list,
 .clients__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   gap: 30px;
 }
 
@@ -63,11 +77,26 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+  outline: 2px solid tomato;
+}
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 480px;
+  }
 }
 
 .title {
@@ -259,9 +288,6 @@ img {
 .features {
   padding-bottom: 118px;
 }
-.features__item {
-  width: 270px;
-}
 .features__icon {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,7 +298,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 270px;
   height: 120px;
   margin-bottom: 30px;
   background-color: #F5F4FA;
@@ -286,12 +311,14 @@ img {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--main-txt-cl);
+  text-align: center;
 }
 .features__text {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 30px;
 }
 
 .works {
@@ -326,7 +353,6 @@ img {
 }
 
 .team__item {
-  width: 270px;
   height: 428px;
   left: 215px;
   top: 1632px;
@@ -825,8 +851,10 @@ img {
   color: var(--main-txt-cl);
   border-radius: 4px;
   background-color: #F5F5F5;
-  -webkit-transition: color var(--animation), background-color var(--animation);
-  transition: color var(--animation), background-color var(--animation);
+  -webkit-transition: color var(--animation), background-color var(--animation), -webkit-box-shadow var(--animation);
+  transition: color var(--animation), background-color var(--animation), -webkit-box-shadow var(--animation);
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
+  transition: color var(--animation), background-color var(--animation), box-shadow var(--animation), -webkit-box-shadow var(--animation);
 }
 .grid__btn:hover, .grid__btn:focus {
   -webkit-box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -894,7 +922,7 @@ img {
   transition: transform var(--animation), -webkit-transform var(--animation);
 }
 
-.grid__thumb:hover .overlay {
+.grid__item:hover .overlay {
   -webkit-transform: translateY(0);
           transform: translateY(0);
 }
@@ -1002,6 +1030,7 @@ img {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  cursor: pointer;
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
   background: #188CE8;

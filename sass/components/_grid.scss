@@ -20,7 +20,7 @@
     color: var(--main-txt-cl);
     border-radius: 4px;
     background-color: #F5F5F5;
-    transition: color var(--animation), background-color var(--animation);
+    transition: color var(--animation), background-color var(--animation), box-shadow var(--animation);
 
 &:hover,
 &:focus {
@@ -75,7 +75,7 @@
     transition: transform var(--animation);
 }
 
-.grid__thumb:hover .overlay {
+.grid__item:hover .overlay {
     transform: translateY(0);
 }
 
