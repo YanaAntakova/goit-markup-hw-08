@@ -7,7 +7,7 @@
 }
 
 .socials__link {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     width: 44px;
@@ -15,8 +15,6 @@
     border-radius: 50%;
 
     background-color: #FFFFFF;
-
-
     color: #AFB1B8;
     transition: color var(--animation), background-color var(--animation);
 &:hover,
@@ -26,15 +24,13 @@
         }
 }
 
-
-
 .socials__icon {
 
     fill: currentColor;
     transition: fill var(--animation);
 
 &:hover,
-    &:focus {
+&:focus {
             fill: currentColor;
         }
 }

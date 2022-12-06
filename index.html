@@ -25,6 +25,57 @@
         <div class="header__container container">
             <nav class="header__nav">
                 <a class="logo link" href="./index.html">Web<span class="logo-header">Studio</span></a>
+         <!--MOBILE MENU -->
+         <button class="menu-toggle js-open-menu btn" aria-expanded="false" aria-controls="mobile-menu">
+             <svg class="js-open-menu__icon" width="40" height="40">
+                 <use href="./images/icons.svg#icon-openmenu"></use>
+             </svg>
+         </button>
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu btn">
+                <svg class="js-close-menu__icon" width="40" height="40">
+                    <use href="./images/icons.svg#icon-closemenu"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu list">
+                <li class="mobile-menu__item">
+                    <a href="./index.html" class="link mobile-menu__link mobile-menu__link--current">Студія</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="./portfolio.html" class="link mobile-menu__link">Портфоліо</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="" class="link mobile-menu__link">Контакти</a>
+                </li>
+            </ul>
+            <ul class="mobile-contacts list">
+                <li class="mobile-contacts__item">
+                    <a href="tel:+380961111111" class="link mobile-contacts__link">+38 096 111 11 11</a>
+                </li>
+                <li class="mobile-contacts__item">
+                    <a href="mailto:info@devstudio.com" class="link mobile-contacts__link">info@devstudio.com</a>
+                </li>
+            </ul>
+            <ul class="mobile-socials list">
+                <li class="mobile-socials__item">
+                    <a href="https://www.instagram.com/?hl=uk" class="mobile-socials__link link" target="_blank"
+                                    rel="noopener noreferrer">Instagram</a>
+                </li>
+                <li class="mobile-socials__item">
+                    <a href="https://twitter.com/?lang=uk" class="mobile-socials__link link" target="_blank"
+                                    rel="noopener noreferrer">Twitter</a>
+                </li>
+                <li class="mobile-socials__item">
+                    <a href="https://www.facebook.com/" class="mobile-socials__link link" target="_blank"
+                                    rel="noopener noreferrer">Facebook</a>
+                </li>
+                <li class="mobile-socials__item">
+                    <a href="https://ua.linkedin.com/" class="mobile-socials__link link" target="_blank" rel="noopener noreferrer">
+                                    LinkedIn</a>
+                </li>
+            </ul>
+            <!-- desktop/tablet -->
+        </div class="navigation">
                 <ul class="header__list list">
                     <li class="header__item current"><a href="" class="header__link current link">Студія</a></li>
                     <li class="header__item"><a href="./portfolio.html" class="header__link link">Портфоліо</a></li>
@@ -305,42 +356,42 @@
             <div class="container">
                 <h2 class="title">Постійні клієнти</h2>
                 <ul class="list clients__list">
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo1"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo2"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo3"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo4"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo5"></use>
                             </svg>
                         </a>
                     </li>
-                    <li>
+                    <li class="clients__item">
                         <a class="clients__link link" href="" target="_blank" rel="noopener noreferrer">
                             <svg class="clients__icon" width="106" height="60">
                                 <use href="./img/sprite.svg#icon-logo6"></use>
@@ -354,7 +405,7 @@
 
     <footer class="footer">
         <div class="container footer__container">
-            <div>
+            <div class="footer__nav">
                 <a class="logo link" href="./index.html">Web<span class="footer__logo">Studio</span></a>
                 <address>
                     <ul class="footer__list list">
@@ -371,7 +422,7 @@
                     </ul>
                 </address>
             </div>
-            <div>
+            <div class="footer-socials">
                 <h3 class="footer__title">ПРИЄДНУЙТЕСЬ</h3>
                 <ul class="socials list">
                     <li class="socials__item">
@@ -408,6 +459,7 @@
                     </li>
                 </ul>
             </div>
+            <!-- subscribe -->
             <div class="subscribe-block">
                 <p class="subscribe__text">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
                 <form class="subscribe" name="sub_scribe">
@@ -418,6 +470,7 @@
             </div>
         </div>
     </footer>
+            <!-- modal -->
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button class="modal__btn" data-modal-close>
@@ -464,6 +517,10 @@
         </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>

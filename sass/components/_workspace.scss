@@ -1,6 +1,17 @@
 .works {
     @extend %section;
     padding-top: 0%;
+    display: none;
+
+    //     // mobile screen
+        @media screen and (max-width: 1199px) {
+            display: none;
+        }
+    
+        //     // desktop screen
+        @media screen and (min-width: 1200px) {
+            display: flex;
+        }
 }
 
 .works__item {

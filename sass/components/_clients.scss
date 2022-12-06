@@ -2,19 +2,32 @@
 @extend %section;
 background-color: #FFFFFF;
 }
-.clients__list {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
+
+.clients__item {
+    @media screen and (max-width: 767px) {
+        flex-basis: calc((100% - 30px * 2) / 3);
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        flex-basis: calc((100% - 30px * 2) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc((100% - 30px * 2) / 3);
+    }
+
+    display: block;
 }
+
 .clients__icon {
     fill: currentColor;
+    display: block;
 }
 .clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    width: 100%;
     height: 92px;
     border: 1px solid currentColor;
     border-radius: 4px;
