@@ -3,8 +3,16 @@
         padding-bottom: 118px;
 
         &__item {
+        @media screen and (max-width: 767px) {
+        width: 100%;
+        }
+        @media screen and (min-width: $tablet) and (max-width: 1199px) {
+            width: 354px;
+        }
+        @media screen and (min-width: $desktop) {
             width: 270px;
         }
+    }
 
         &__icon {
             display: flex;
