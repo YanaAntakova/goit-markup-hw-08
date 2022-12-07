@@ -164,10 +164,7 @@
       </path>
     </symbol>
     <symbol id="icon-openmenu" viewBox="0 0 32 32">
-      <path
-        d="M6.4 11.733v-2.133h19.2v2.133h-19.2zM6.4 17.067h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.133h-19.2v2.133z">
-      </path>
-    </symbol>
+      <path d="M6.4 11.733V9.6h19.2v2.133H6.4zm0 5.334h19.2v-2.133H6.4v2.133zm0 5.333h19.2v-2.133H6.4V22.4z" />
     </symbol>
     <symbol id="icon-closemenu" viewBox="0 0 32 32">
       <path
