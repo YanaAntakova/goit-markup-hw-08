@@ -99,11 +99,6 @@ img {
   margin-left: auto;
   outline: 2px solid tomato;
 }
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-  }
-}
 @media screen and (min-width: 768px) {
   .container {
     width: 768px;
@@ -145,7 +140,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
   height: 100%;
 }
 .header__list {
@@ -158,25 +152,35 @@ img {
   gap: 50px;
 }
 
-.navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-}
 @media screen and (max-width: 768px) {
-  .navigation {
+  .header__list {
     display: none;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
-  .navigation {
-    margin-left: 87px;
+  .header__list {
+    margin-left: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-item-align: center;
+    align-self: center;
+    gap: 10px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .navigation {
+  .header__list {
     margin-left: 93px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header__contacts {
+    display: none;
   }
 }
 
@@ -215,14 +219,6 @@ img {
   transition: transform var(--animation), opacity var(--animation), -webkit-transform var(--animation);
   -webkit-transform: translate(-50%) scaleX(0.3);
           transform: translate(-50%) scaleX(0.3);
-}
-
-.header__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 50px;
-  margin-left: auto;
 }
 
 .header__contact {
@@ -295,8 +291,12 @@ img {
   height: 400px;
   margin: 0 auto;
   background-size: cover;
-  padding-top: 200px;
-  padding-bottom: 200px;
+}
+@media screen and (max-width: 767px) {
+  .hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -309,14 +309,12 @@ img {
 .hero__title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.3;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #FFFFFF;
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .hero__title {
     font-size: 26px;
     line-height: 1.62;
@@ -465,14 +463,18 @@ img {
   border-radius: 0px 0px 4px 4px;
 }
 @media screen and (max-width: 767px) {
-  .team__item:not(:last-child) {
-    margin-bottom: 30px;
+  .team__item {
+    width: 100%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .team__item {
-    -ms-flex-preferred-size: 354px;
-        flex-basis: 354px;
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    width: 270px;
   }
 }
 
@@ -511,6 +513,10 @@ img {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+}
+
+.photo {
+  width: 100%;
 }
 
 .footer {
@@ -564,6 +570,7 @@ img {
 @media screen and (max-width: 767px) {
   .footer-socials {
     margin-bottom: 60px;
+    margin-top: 60px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -686,20 +693,24 @@ img {
 }
 @media screen and (max-width: 767px) {
   .clients__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 30px) / 2);
+        flex-basis: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .clients__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 30px) / 4);
+        flex-basis: calc((100% - 30px) / 4);
+    width: 226px;
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
-    -ms-flex-preferred-size: calc((100% - 60px) / 3);
-        flex-basis: calc((100% - 60px) / 3);
+    -ms-flex-preferred-size: calc((100% - 30px) / 7);
+        flex-basis: calc((100% - 30px) / 7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -1367,7 +1378,7 @@ img {
   margin-bottom: 64px;
 }
 
-.mobile-contacts__item:first-child {
+.mobile-contacts__link {
   font-weight: 500;
   font-size: 34px;
   line-height: 1.18;
@@ -1376,7 +1387,7 @@ img {
   margin-bottom: 32px;
 }
 
-.mobile-contacts__item:nth-child(2) {
+.mobile-contacts__link {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.17;
