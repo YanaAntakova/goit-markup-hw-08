@@ -123,6 +123,19 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-txt-cl);
 }
+@media screen and (max-width: 1199px) {
+  .title {
+    font-size: 28px;
+    line-height: 1.18;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
 
 .header {
   background-color: #FFFFFF;
@@ -323,7 +336,7 @@ img {
   margin: 0 auto;
   background-size: cover;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .hero {
     padding-top: 118px;
     padding-bottom: 118px;
@@ -351,11 +364,6 @@ img {
     line-height: 1.62;
   }
 }
-@media screen and (min-width: 768px) {
-  .hero__title {
-    margin-top: 58px;
-  }
-}
 @media screen and (min-width: 1200px) {
   .hero__title {
     font-size: 44px;
@@ -378,7 +386,6 @@ img {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0;
-  min-width: 220px;
   min-height: 50px;
   padding: 10px 24px;
   display: inline-block;
@@ -394,9 +401,6 @@ img {
   }
 }
 
-.features {
-  padding-bottom: 118px;
-}
 @media screen and (max-width: 767px) {
   .features__item {
     width: 100%;
@@ -1294,6 +1298,7 @@ img {
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   cursor: pointer;
 }
 .subscribe__btn:hover, .subscribe__btn:focus {
@@ -1462,4 +1467,12 @@ img {
   line-height: 1.22;
   color: var(--accent-cl);
   letter-spacing: 0.02em;
+}
+
+.tel {
+  color: var(--accent-cl);
+}
+
+.mail {
+  color: #757575;
 }/*# sourceMappingURL=main.css.map */
