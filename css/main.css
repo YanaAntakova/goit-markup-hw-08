@@ -818,6 +818,7 @@ img {
   transition: opacity var(--animation), -webkit-transform var(--animation);
   transition: transform var(--animation), opacity var(--animation);
   transition: transform var(--animation), opacity var(--animation), -webkit-transform var(--animation);
+  padding: 40px;
 }
 @media screen and (max-width: 480px) {
   .modal {
